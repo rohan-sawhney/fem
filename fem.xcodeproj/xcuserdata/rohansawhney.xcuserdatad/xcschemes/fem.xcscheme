@@ -63,7 +63,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/rohansawhney/Desktop/developer/C++/fem/objs/disk.obj /Users/rohansawhney/Desktop/developer/C++/fem/shaders"
+            argument = "/Users/rohansawhney/Desktop/developer/C++/fem/objs/square.obj /Users/rohansawhney/Desktop/developer/C++/fem/shaders"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

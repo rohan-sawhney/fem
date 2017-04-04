@@ -23,7 +23,7 @@ void HalfEdge::vertexData(vector<Vector2d>& x, vector<int>& index, int offset) c
     index[0] = vertex->index;
     
     const Vector3d& b = next->vertex->position;
-    x[1] = Vector2d(a.x(), a.y());
+    x[1] = Vector2d(b.x(), b.y());
     index[1] = next->vertex->index;
     
     if (offset > 0) {

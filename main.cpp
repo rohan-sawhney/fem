@@ -45,7 +45,7 @@ bool pickingEnabled = false;
 
 int bdyType(int index)
 {
-    return DIRICHLET;
+    return NEUMANN;
 }
 
 void fRhs(const Vector2d& x, double& f)
