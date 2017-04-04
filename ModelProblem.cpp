@@ -60,7 +60,7 @@ void ModelProblem::computeNeumannData(const vector<Vector2d>& x, VectorXd& fe) c
         
         // compute normal derivative
         double dxds = dx.norm();
-        Vector2d n = Vector2d(dx(1), -dx(0))/dxds;
+        Vector2d n = Vector2d(-dx(1), dx(0))/dxds;
         Vector2d dudx; solution->dExact(xx, dudx);
         double dudn = dudx.dot(n);
         
