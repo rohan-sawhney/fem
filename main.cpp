@@ -37,6 +37,7 @@ const Vector3f lightPosition(0.0, 3.0, -3.0);
 const Vector3f lightColor(1.0, 1.0, 1.0);
 
 VectorXd u;
+Vector3d up(0.0, 1.0, 0.0);
 
 bool success = true;
 bool showNormals = false;
@@ -45,7 +46,13 @@ bool pickingEnabled = false;
 
 int bdyType(int index)
 {
-    return DIRICHLET;
+    const Edge& e = mesh.edges[index];
+    Vector3d v = e.he->flip->vertex->position - e.he->vertex->position; 
+    if (fabs(v.dot(up)) < 1e-3) {
+        return DIRICHLET;
+    }
+    
+    return NEUMANN;
 }
 
 void fRhs(const Vector2d& x, double& f)
